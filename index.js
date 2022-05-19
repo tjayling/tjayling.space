@@ -27,7 +27,14 @@
     // mouth
     myFaceRectangles.push(new Rectangle(20, 400, 300, 80, "white"));
 
+    
+    myFaceRectangles[1].setUpdate(Math.random()*5, Math.random()*2, 85, 125, 125, 165);
+    myFaceRectangles[3].setUpdate(Math.random()*5, Math.random()*2, 310, 390, 90, 190);
+
+
     myFaceRectangles[4].setUpdate(2, 1, 20, 180, 260, 400);
+
+
 
     // loop through rectangles and update for each
     window.requestAnimationFrame(update);
