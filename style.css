@@ -1,0 +1,115 @@
+/*
+Colour Pallete:
+#e46fb3
+*/
+header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  user-select: none;
+  background-color: #512940;
+}
+
+h1 {
+  /* font-family: "Koulen", cursive; */
+  font-family: "Antic Slab", serif;
+  font-size: 50px;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.title {
+  font-family: "Antic Slab", serif;
+  text-align: center;
+  color: #e46fb3;
+  margin: 0px;
+}
+
+#title1 {
+  font-weight: lighter;
+  padding-top: 20px;
+}
+#title2 {
+  font-family: "Antic Slab", serif;
+  padding-bottom: 20px;
+  /* color: #a10000; */
+}
+
+.center {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  /* display: block;
+  margin: 0 auto; */
+  /* display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%; */
+}
+
+#menuCanvas {
+  background-color: #e46fb3;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #eeeeee;
+}
+
+#gitlink {
+  text-align: center;
+  /* display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%; */
+}
+
+.btn {
+  display: inline-block;
+  position: relative;
+  margin: 5px;
+  padding: 2px;
+  border-radius: 2px;
+  text-decoration: none;
+  outline-style: solid;
+  outline-width: 2px;
+  transition: all 0.1s ease-in-out;
+}
+.btn:hover {
+  transform: scale(1.05);
+}
+.btn:active {
+  transform: scale(0.9);
+}
+
+.btn.footer {
+  background-color: #efefef;
+  color: #555555;
+  outline-style: none;
+}
+.btn.footer:hover {
+  background-color: #dedede;
+}
+
+.btn.del {
+  background-color: #f86c6c;
+  color: white;
+  /* display: block; */
+}
+.btn.del:hover {
+  background-color: #eeeeee;
+}
+
+input {
+  border-radius: 5px;
+  padding: 2px;
+}
