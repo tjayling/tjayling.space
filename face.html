@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -13,36 +13,31 @@
       href="https://fonts.googleapis.com/css2?family=Antic+Slab&display=swap"
       rel="stylesheet"
     />
-    <!-- import jQuery -->
     <script
       src="https://code.jquery.com/jquery-3.3.1.js"
       integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
       crossorigin="anonymous"
     ></script>
-    <!-- import my footer -->
     <script>
       $(function () {
         $("#footer").load("footer.html");
       });
     </script>
 
-    <!-- link stylesheet -->
     <link rel="stylesheet" href="style.css" />
-    <!-- set page title -->
-    <title>tjayling.space (live)</title>
+    <title>face (live)</title>
   </head>
   <body>
     <header>
-      <div class="title">
-        <h1 id="title1">Welcome to</h1>
-        <h1 id="title2">tjayling.space</h1>
-      </div>
+      <h1 class="title" id="title3">Check out this strage face</h1>
     </header>
     <nav>
-      <a href="/face.html" class="btn nav">Funny Face</a>
+      <a href="/index.html" class="btn nav">Home</a>
     </nav>
-    <nav></nav>
+    <div class="center">
+      <canvas id="menuCanvas" width="500" height="500"></canvas>
+    </div>
     <footer id="footer"></footer>
-    <script src="/index.js"></script>
+    <script src="/face.js"></script>
   </body>
 </html>

@@ -10,6 +10,10 @@ header {
   user-select: none;
   background-color: #512940;
 }
+body {
+  font-family: "Koulen", cursive;
+  margin-top: 150px;
+}
 
 h1 {
   /* font-family: "Koulen", cursive; */
@@ -23,17 +27,27 @@ h1 {
   font-family: "Antic Slab", serif;
   text-align: center;
   color: #e46fb3;
-  margin: 0px;
+  height:10%;
 }
 
 #title1 {
+  font-size: 200%;
   font-weight: lighter;
+  padding-bottom: 0px;
   padding-top: 20px;
+  margin: 0px;
 }
 #title2 {
-  font-family: "Antic Slab", serif;
+  font-size: 400%;
+  padding-top: 0px;
   padding-bottom: 20px;
+  margin: 0px;
   /* color: #a10000; */
+}
+#title3 {
+  font-family: "Antic Slab", serif;
+  padding: 20px;
+  margin: 0px;
 }
 
 .center {
@@ -89,6 +103,10 @@ footer {
 }
 .btn:active {
   transform: scale(0.9);
+}
+
+.btn.nav {
+  margin-top: 15px;
 }
 
 .btn.footer {
