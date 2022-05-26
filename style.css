@@ -2,32 +2,55 @@
 Colour Pallete:
 #e46fb3
 */
+
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
 header {
-  position: fixed;
+  position: relative;
   left: 0;
   top: 0;
   width: 100%;
   user-select: none;
-  background-color: #512940;
+  background-color: #512940b0;
+  display: flex;
+  flex-direction: row;
 }
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
 body {
   font-family: "Koulen", cursive;
-  margin-top: 150px;
+  background-color: #000000;
+}
+
+body#index {
+  background-color: #000000;
 }
 
 h1 {
-  /* font-family: "Koulen", cursive; */
   font-family: "Antic Slab", serif;
   font-size: 50px;
   font-weight: bold;
   font-style: normal;
 }
 
+main {
+  padding: 0;
+  margin: 0;
+}
+
 .title {
   font-family: "Antic Slab", serif;
   text-align: center;
   color: #e46fb3;
-  height:10%;
+  height: 10%;
+  padding-right: 86px;
 }
 
 #title1 {
@@ -35,13 +58,11 @@ h1 {
   font-weight: lighter;
   padding-bottom: 0px;
   padding-top: 20px;
-  margin: 0px;
 }
 #title2 {
   font-size: 400%;
   padding-top: 0px;
   padding-bottom: 20px;
-  margin: 0px;
   /* color: #a10000; */
 }
 #title3 {
@@ -55,16 +76,8 @@ h1 {
   position: absolute;
   top: 50%;
   transform: translate(0, -50%);
-  align-items: center;
   justify-content: center;
   width: 100%;
-
-  /* display: block;
-  margin: 0 auto; */
-  /* display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%; */
 }
 
 #menuCanvas {
@@ -76,11 +89,12 @@ footer {
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: #eeeeee;
+  background-color: #75757538;
 }
 
 #gitlink {
   text-align: center;
+  filter: invert(1);
   /* display: block;
     margin-left: auto;
     margin-right: auto;
@@ -106,16 +120,18 @@ footer {
 }
 
 .btn.nav {
-  margin-top: 15px;
+  margin: 10px 0 0 10px;
+  padding: 0 5px 0 5px;
+  background-color: #e46fb338;
+  color: #e46fb3;
+  outline-style: none;
 }
 
 .btn.footer {
-  background-color: #efefef;
-  color: #555555;
   outline-style: none;
 }
 .btn.footer:hover {
-  background-color: #dedede;
+  background-color: #75757538;
 }
 
 .btn.del {

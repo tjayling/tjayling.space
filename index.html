@@ -19,30 +19,40 @@
       integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
       crossorigin="anonymous"
     ></script>
+    <!-- import P5.js -->
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.js"></script>
     <!-- import my footer -->
     <script>
       $(function () {
         $("#footer").load("footer.html");
       });
     </script>
-
     <!-- link stylesheet -->
     <link rel="stylesheet" href="style.css" />
     <!-- set page title -->
     <title>tjayling.space (live)</title>
   </head>
-  <body>
+
+  <body id="index">
     <header>
-      <div class="title">
+      <nav>
+        <ul>
+          <li><a href="/face.html" class="btn nav">Funky Face</a></li>
+          <li><a href="/boids.html" class="btn nav">Flocking Boids</a></li>
+        </ul>
+      </nav>
+      <div class="title" style="margin: auto">
         <h1 id="title1">Welcome to</h1>
         <h1 id="title2">tjayling.space</h1>
       </div>
     </header>
-    <nav>
-      <a href="/face.html" class="btn nav">Funny Face</a>
-    </nav>
-    <nav></nav>
+
+    <div id="loadingGif" class="center">
+      <img src="/img/loading.gif" alt="Loading..." width="50" height="50" />
+    </div>
+
     <footer id="footer"></footer>
-    <script src="/index.js"></script>
+    <script src="solar.js"></script>
+    <!-- <script src="/index.js"></script> -->
   </body>
 </html>
