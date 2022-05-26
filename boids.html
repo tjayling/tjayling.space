@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- importing fonts from google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Antic+Slab&family=Koulen&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Antic+Slab&display=swap"
+      rel="stylesheet"
+    />
+    <!-- import jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous"
+    ></script>
+    <!-- import P5.js -->
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.js"></script>
+    <!-- import my footer -->
+    <script>
+      $(function () {
+        $("#footer").load("footer.html");
+      });
+    </script>
+    <!-- link stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- set page title -->
+    <title>boids (live)</title>
+  </head>
+
+  <body id="boids">
+    <header>
+      <nav>
+        <ul>
+          <li><a href="/index.html" class="btn nav">Home</a></li>
+          <li><a href="/face.html" class="btn nav">Funky Face</a></li>
+        </ul>
+      </nav>
+      <div class="title" style="margin:auto;">
+        <h1 id="title1">check out my</h1>
+        <h1 id="title2">flocking boids</h1>
+      </div>
+    </header>
+    <footer id="footer"></footer>
+    <script src="boid.js"></script>
+    <script src="boids.js"></script>
+  </body>
+</html>
