@@ -1,6 +1,17 @@
 :root {
   --border: rgb(3, 169, 244);
 
+  --background: #03071eff;;
+  --header-footer: #370617ff;
+  --logo: #6a040fff;
+  --dark-red: #9d0208ff;
+  --rosso-corsa: #d00000ff;
+  --vermilion: #dc2f02ff;
+  --persimmon: #e85d04ff;
+  --tangerine: #f48c06ff;
+  --orange-web: #faa307ff;
+  --selective-yellow: #ffba08ff;
+
   --g1: rgb(98, 0, 234);
   --g2: rgb(236, 64, 122);
   --g3: rgb(253, 216, 53);
@@ -14,19 +25,22 @@
 
 html,
 body {
-  background-color: #0b0a0c;
+  background-color: var(--background);
   height: 100%;
   color: aliceblue;
 }
 
-#header-container {
+/*   HEADER   */
+
+.header-container {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  height: 15vmin;
+  background-color: var(--header-footer);
+  margin-bottom: 10px;
 }
 
-#title-container {
-}
 
 .page-container {
   display: flex;
@@ -45,12 +59,11 @@ body {
 }
 
 .card {
-  aspect-ratio: 1 / 1.6;
+  aspect-ratio: 1/1.6;
   border: 0.5vmin solid var(--border);
   cursor: pointer;
   position: relative;
-  width: 56vmin;
-  max-height: 90vh;
+  max-height: 75vh;
 }
 
 .card:before {
@@ -90,7 +103,8 @@ body {
 }
 
 .card-title,
-.card-subtitle {
+.card-subtitle,
+.link-title {
   color: aliceblue;
   font-family: "Anek Latin", sans-serif;
   font-weight: 400;
@@ -101,9 +115,27 @@ body {
   font-size: 6vmin;
 }
 
-.card-subtitle {
+.card-subtitle,
+.link-title {
   font-size: 3vmin;
   margin-top: 2vmin;
+}
+
+.link {
+  font-size: 1vmin;
+  text-decoration: none;
+}
+
+.about-link {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  margin-bottom: 1vmin;
+  margin-right: 3vmin;
+}
+
+.about-link:hover > .link-title > .card-subtitle-word {
+  font-weight: bold;
 }
 
 .card-subtitle-word {
@@ -115,7 +147,8 @@ body {
   opacity: 0;
 }
 
-.card:hover > .card-content > .card-subtitle > .card-subtitle-word {
+.card:hover > .card-content > .card-subtitle > .card-subtitle-word,
+.card:hover > .card-content > .about-link > .link-title > .card-subtitle-word {
   transform: translateY(0%);
   transition: opacity 0ms, transform 200ms cubic-bezier(0.9, 0.06, 0.15, 0.9);
   opacity: 1;

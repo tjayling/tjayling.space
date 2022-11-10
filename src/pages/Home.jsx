@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
   useEffect(() => {
-    createSubtitle("Tom's digital playground.");
+    createSubtitles(document.querySelector(".card-subtitle"), "Tom's digital playground .");
+    createSubtitles(document.querySelector(".link-title"), "More this way . . .");
+    
   }, []);
 
   const createWord = (text, index) => {
@@ -13,10 +16,9 @@ const HomePage = () => {
     return word;
   };
 
-  const createSubtitle = (text) => {
-    const subtitle = document.querySelector(".card-subtitle");
+  const createSubtitles = (element, text) => {
     text.split(" ").map((word, i) => {
-      subtitle.appendChild(createWord(word, i));
+      element.appendChild(createWord(word, i));
     });
   };
 
@@ -26,6 +28,9 @@ const HomePage = () => {
         <div className="card-content">
           <h3 className="card-title">Welcome to tjayling.space</h3>
           <h4 className="card-subtitle"></h4>
+          <Link to={`/about`} className="link about-link" >
+            <h4 className="link-title"></h4>
+          </Link>
         </div>
       </div>
     </div>
