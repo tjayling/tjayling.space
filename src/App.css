@@ -1,7 +1,7 @@
 :root {
   --border: rgb(3, 169, 244);
 
-  --background: #03071eff;;
+  --background: #03071eff;
   --header-footer: #370617ff;
   --logo: #6a040fff;
   --dark-red: #9d0208ff;
@@ -12,9 +12,11 @@
   --orange-web: #faa307ff;
   --selective-yellow: #ffba08ff;
 
-  --g1: rgb(98, 0, 234);
-  --g2: rgb(236, 64, 122);
-  --g3: rgb(253, 216, 53);
+  --g1: #9d0208ff;
+  --g2: #e85d04ff;
+  --g3: #ffba08ff;
+
+  --header-height: 10vh;
 }
 
 @font-face {
@@ -36,11 +38,19 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 15vmin;
+  height: 10vh;
   background-color: var(--header-footer);
-  margin-bottom: 10px;
+  margin-bottom: 0;
 }
 
+.logo-container {
+  margin-left: 5vmin;
+  display: inline-flex;
+}
+
+.logo-text {
+  left: -50vmin;
+}
 
 .page-container {
   display: flex;
@@ -152,4 +162,23 @@ body {
   transform: translateY(0%);
   transition: opacity 0ms, transform 200ms cubic-bezier(0.9, 0.06, 0.15, 0.9);
   opacity: 1;
+}
+
+/*   CIRCLES PAGE   */
+
+.circles-page {
+  height: 90vh;
+  margin: 0;
+  padding: 0;
+  user-select: none; 
+  /* background-color: whitesmoke ; */
+}
+
+.circle {
+  background-color: rgba(255, 255, 255, 0.2);
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border: white solid 1px;
+  border-radius: 50%;
 }
