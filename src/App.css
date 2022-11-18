@@ -39,7 +39,7 @@ body {
   align-items: center;
   justify-content: space-between;
   height: 10vh;
-  background-color: var(--header-footer);
+  background-color: var(--background);
   margin-bottom: 0;
 }
 
@@ -170,8 +170,6 @@ body {
   height: 90vh;
   margin: 0;
   padding: 0;
-  user-select: none; 
-  /* background-color: whitesmoke ; */
 }
 
 .circle {
@@ -181,4 +179,79 @@ body {
   height: 10px;
   border: white solid 1px;
   border-radius: 50%;
+}
+
+/*   MEMORY GAME   */
+
+.memory-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+}
+
+.flip-card {
+  perspective: 1000px;
+  width: 15vmin;
+  aspect-ratio: 117/174;
+  margin: 5px;
+  font-size: 5vmin;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card.not-flipped > .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card.not-flipped > .flip-card-inner > div > img {
+  transition: 0.2s;
+}
+
+.flip-card.not-flipped:hover > .flip-card-inner > div > img {
+  filter: brightness(115%);
+  transform: scale(1.05);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 7px;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+  cursor: pointer;
+}
+
+.card-img {
+  width: 100%;
+  border-radius: 7px;
+  pointer-events: none;
 }
