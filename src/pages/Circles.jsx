@@ -12,13 +12,13 @@ const Circles = () => {
   const [popped, setPopped] = useState([]);
 
   const handleUndo = () => {
-    if (positions.length == 0) return null;
+    if (positions.length === 0) return null;
     setPopped([...popped, positions[positions.length - 1]]);
     positions.pop();
   };
 
   const handleRedo = () => {
-    if (popped.length == 0) return null;
+    if (popped.length === 0) return null;
     setPositions([...positions, popped[popped.length - 1]]);
     popped.pop();
   };

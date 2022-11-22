@@ -46,10 +46,9 @@ const Memory = () => {
   }, [reset]);
 
   const checkBoard = () => {
-    let won = true;
     for (let row of revealed) {
       for (let col of row) {
-        if (col == false) return;
+        if (col === false) return;
       }
     }
     setGameWon(true);
